@@ -15,3 +15,10 @@ def preenche_frota(frota, navio, linha, coluna, ori, tamanho):
     frota[navio].append(posicao)
     
     return frota
+
+def faz_jogada(tab, linha, coluna):
+    if tab[linha][coluna] == 1:
+        tab[linha][coluna] = 'X'
+    elif tab[linha][coluna] == 0:
+        tab[linha][coluna] = '-'
+    return tab
