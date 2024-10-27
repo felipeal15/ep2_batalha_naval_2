@@ -22,3 +22,16 @@ def faz_jogada(tab, linha, coluna):
     elif tab[linha][coluna] == 0:
         tab[linha][coluna] = '-'
     return tab
+
+def posiciona_frota(f):
+    tab = []
+    for lin in range(10):
+        linha = []
+        for col in range(10):
+            linha.append(0)
+        tab.append(linha)
+    for ps in f.values():
+        for pos in ps:
+            for linha, colu in pos:
+                tab[linha][colu] = 1
+    return tab
